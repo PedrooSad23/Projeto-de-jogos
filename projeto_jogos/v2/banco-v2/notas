@@ -1,0 +1,5 @@
+Mudei o id de todas as tabelas para auto increment.
+Alterei os relacionamentos de cliente para compra por 1:N (não identificado), compra com jogo 1:1 (não identificado) e desenvolvedor pra jogo 1:N (não identificado).
+ALteramos o nome do schema para loja_jogo.
+Alteramos o tipo de dado do atributo preco da tabela jogo para decimal(5,2).
+Estava certo os dados das tabelas, somente um relacionamento estava errado. única dúvida que gerou foi que existiam duas tabelas escondidas no banco. Nada mais de dúvidas ou questionamentos.
