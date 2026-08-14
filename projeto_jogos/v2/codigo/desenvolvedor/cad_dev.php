@@ -6,19 +6,19 @@
     <title>Document</title>
 </head>
 <body>
-    <h3>Cadastro do cliente</h3>
-    <form action="salvar_cliente.php" method="GET">
+    <h3>Cadastro do Dev</h3>
+
+    <form action="salvar_dev.php" method="GET">
         Nome: <br>
         <input type="text" name="nome"> <br>
 
-        Username: <br>
-        <input type="text" name="usuario"> <br>
+         Email: <br>
+        <input type="text" name="email"> <br>
 
          Senha: <br>
-        <input type="varchar" name="senha"> <br>
+        <input type="text" name="senha"> <br>
 
         <input type="submit" value="Cadastrar">
-        
     </form>
 
     <a href="../index.php">Menu</a>

@@ -14,32 +14,34 @@
     <table>
         <tr>
             <td>Id</td>
-            <td>Usuario</td>
-            <td>Data de Criação</td>
+            <td>Nome</td>
+            <td>Email</td>
             <td>Senha</td>
+            <td>Data de Criação</td>
             <td>Ação</td>
         </tr>
 
         <?php
         require_once "../conexao.php";
 
-        $sql = "SELECT * FROM cliente";
+        $sql = "SELECT * FROM desenvolvedor";
 
         $resultados = mysqli_query($conexao, $sql);
 
-        //quebra a variável $resultados em linhas (vetores/array)
         while ($linha = mysqli_fetch_array($resultados)) {
-            $id_cliente = $linha['id_cliente'];
+            $id_desenvolvedor = $linha['id_desenvolvedor'];
             $nome = $linha['nome'];
-            $usuario = $linha['usuario'];
+            $email = $linha['email'];
             $senha = $linha['senha'];
+            $data_criacao = $linha['data_criacao'];
 
             echo "<tr>";
-            echo "<td>$id_cliente</td>";
+            echo "<td>$id_desenvolvedor</td>";
             echo "<td>$nome</td>";
-            echo "<td>$usuario</td>";
+            echo "<td>$email</td>";
             echo "<td>$senha</td>";
-            echo "<td><a href='ex_cliente.php?id_cliente=$id_cliente'><img class='lixo' src='../imagens/lixeira.png'></a></td>";
+            echo "<td>$data_criacao</td>";
+            echo "<td><a href='ex_dev.php?id_desenvolvedor=$id_desenvolvedor'><img class='lixo' src='../imagens/lixeira.png'></a></td>";
             echo "</tr>";
         }
 
